@@ -1,0 +1,106 @@
+                      Gear and Tire Applet User Guide
+
+The document is a user guide for the Gear and Tire Applet. The first
+section describes general use of the applet and the other sections contain
+more specific information about tires, transmissions, transfer cases, and
+ring and pinion, The general section covers what the Gear and Tire Applet
+is and what it can be used for. It also covers general information on
+ratios and the input and output of the Gear and Tire Applet.
+
+What is the Gear and Tire Applet?
+
+The gear and tire form is designed to assist you making gear and tire
+selections for your four wheel drive vehicle. Larger tires gain ground
+clearance, increase maximum fording depth, and increase the angles of
+departure and approach, but they often don't work well with OEM gearing.
+Auto manufactures build trucks for the street, which means they select high
+gearing for fast acceleration and better gas milage. When larger tires are
+put on these trucks, the driver may find themselves burning through
+clutches because first gear is so high. Engine performance and gas milage
+may suffer because the engine is forced to work outside of it's optimal RPM
+ranges. Top speed on the highway will increase, but so will low speed on
+the trail.
+
+There are two main motivations to regear, the first is to return the truck
+to the manufactures operating ranges to improve engine performance and
+decrease wear and tear on the clutch and transmission. The second is to
+increase offroad performance with lower gearing. Lower gearing allows the
+offroader to go slower through obstacles giving the driver better control
+so there is less chance of vehicle damage and occupant injury. There is a
+penalty for low gears on top highway cruising speed. The gear and tire form
+is designed to allow the user to try different configurations and see what
+performance will be like for different configurations before going through
+an expensive gear swap.
+
+General Information on Gear Ratios
+
+One important aspect of gear ratios is numerically large gears are the low
+ones. Gear ratios are normally stated in the form x.xx:1, e.g. 6.32:1. This
+translates mathematically to 1/6.32, and since 1/2 is more than 1/6, 6:1 is
+lower than 2:1. The ratio means that for every 6.32 revolutions from the
+input the output will rotate once. This happens to be granny low first gear
+on a Ford T-18 transmission. When you are in first with the T-18, the
+engine does 6.32 revolutions for every 1 revolution the transmissions
+outputs. Fourth gear on the T-18 is 1.00:1, so for every revolution of the
+engine, it outputs one revolution.
+
+Input for the Gear and Tire Applet
+
+The Gear and Tire Applet takes as input your tire size, transmission
+ratios, transfer case low range, and ring and pinion.
+
+The tire field will accept input in English or metric sizes. The entire
+metric size must be input to calculate diameter, but the prefix 'P' or 'LT'
+are optional. For example the tire size P225/75R15 could be entered without
+the 'P'. For English sizes, the gear and tire form is only interested in
+the diameter in inches. The rest is not needed, but if it is typed it will
+be ignored. For example '32x11.50R15LT M+S' can be just entered 32.
+
+Input of Transmission ratios, transfer case low range, and ring and pinion
+all have the same basic form. The Gear and Tire Applet is looking for the
+ratios and ratios are commonly expressed in the form x.xx:1. To save some
+typing the ':1' part does not need to be entered. You can enter it if you
+like but, it will be ignored. If you have tooth counts, for ring and pinion
+for example, just divide the big number by the small. For example 41/10
+ring and pinion translate to 4.10:1.
+
+The user has the option to produce output in kilometers per hour or miles
+per hour. No output is produced until the 'calculate' button is pressed.
+This document is available by pressing the 'help' button.
+
+Output for the Gear and Tire Applet
+
+When the calculate button is pressed output is created in both graphical
+and tabular form. The graph is a line graph with RPM on the x-axis ranging
+from 0 to 4000 RPM. The y-axis is either MPH or KPH depending on user
+input. MPH range from 0 to 80 MPH. KPH range from 0 to 120 KPH. Each
+transmission gear is printed out as a seperate line in the graph first
+being red, second blue, third green, fourth black, and fifth yellow. A
+check box at the botton of the graph allows the user to "shift" the
+transfer case into low range. The title of the graph gives the users tire
+size and ring and pinion ratio.
+
+The tabular output is also produced each time the calculate button is
+pressed. The title on the tabular output indicates the units of output
+either KPH or MPH. It also indicates the users selection of tire and ring
+and pinion and allows the user to enter different RPMs to see the table at
+various engine outputs. Each row of the table represents a gear of the
+transmission first, second, third and so forth. The columns represent high
+and low range of the transfer case.
+
+The crawl ratio, which is often used to compare gearing set ups, is also
+included in the tabular output. The crawl ratio represents compound low, or
+first gear of the transmission and low range of the transfer case. For
+example, many Wranglers have a first gear around 3.83:1, the transfer case
+low range is 2.72:1, and the axle ring and pinion is 3.07:1. This means the
+crawl ratio is 3.83*2.72*3.07 or around 32:1. Put some big tires on that
+Wrangler and it will be difficult to control on a technical trail. A crawl
+ratio around 60:1 is often good target.
+
+There is more detailed help on tires, transmissions, transfer cases, and
+ring and pinion, see the special sections for these topics.
+
+---------------------------------------------------------------------------
+Author: Terry L Howe (txh3202@hertz.njit.edu)
+July 18, 1996
+---------------------------------------------------------------------------

@@ -1,0 +1,135 @@
+<HEAD>
+<TITLE>Terry's Internet Page</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+/*
+** Marquee stuff
+*/
+var buffer = "                                         ";
+var text = "Expect annoying Java applets...";
+var marqueeString = buffer + text + buffer;
+var marqueeRunning = false;
+var timeoutID = null;
+var position = 0;
+var sLength = marqueeString.length;
+ 
+function stopMarquee() {
+        if (marqueeRunning)
+                clearTimeout(timeoutID);
+        marqueeRunning = false;
+}
+ 
+function startMarquee() {
+        stopMarquee();
+        updateMarquee();
+}
+ 
+function updateMarquee() {
+        document.marquee.elements[0].value = marqueeString.substring(position++%sLength,position+(60-1)%sLength);
+        timeoutID = setTimeout("updateMarquee()", 100);
+        marqueeRunning = true;
+}
+ 
+// -->
+</SCRIPT>
+</HEAD>
+<BODY OnLoad="startMarquee()" onUnLoad="stopMarquee()">
+<CENTER>
+<H1>Terry's Internet Page</H1>
+<FORM NAME="marquee">
+<INPUT TYPE="text" NAME="textBox" VALUE="" SIZE=60>
+<BR>
+<INPUT TYPE="button" NAME="start" VALUE="Start" onClick="startMarquee()"
+>
+<INPUT TYPE="button" NAME="stop" VALUE="Stop" onClick="stopMarquee()">
+<BR>
+</FORM>
+</CENTER>
+
+<P>
+Use of the Internet is a minor hobby for me.  I have become proficient
+for the job benefits and to access information for other hobbies.
+
+<H2>The AT&T WWW Mailing List</H2>
+<P>
+The AT&T WWW mailing list is a discussion group for anything
+related to AT&T and the WWW.
+In order to subscribe to the AT&T WWW list you must send
+a message to <A HREF="mailto:hotair!att.infosystems.www-request">
+hotair!att.infosystems.www-request</A> with a message body of:
+<P>
+<PRE>
+subscribe www &lt;your human name, i.e., Joe Btfsplk&gt;
+
+eg:
+
+subscribe www Joe Btfsplk
+
+</PRE>
+This system is automated so don't bother including other text.
+<P>
+In order to post to the mailing list send email to
+att.infosystems.www@hotair.tbu.att.com, but don't use this address
+for administrative
+purposes or you will send a message to everyone on the list.
+
+<H2>Check out my Text 3D Maze</H2>
+I finally converted a text 3D maze program I wrote years ago to
+produce and HTML form.  Useless, but cool.
+<P>
+<A HREF="http://bcappd1.mt.att.com/cgi-bin/terry/mase">Text 3D Maze</A>
+
+<H2>Gear and Tire Input Form</H2>
+I also have been working on a gear and tire form for Jeeps.
+<P>
+<A HREF="http://studentweb.tulane.edu/cgi-bin/a.out">Gear and Tire form.</A>
+
+<H2>Generating GIF Images for the Web</H2>
+The latest thing I am investigating is generating GIF images for
+web pages.  The <A HREF="gd.html">gd</A> library written by
+Thomas Boutell generates gif images with a limited set of graphics
+functions.  A <A HREF="gdgif.html">patch</A> was provide by Viet
+Hoang integrates this library with
+<A HREF="gnuplot.ps">gnuplot</A> to create
+<A HREF="gpcard.ps">graphs</A>
+on the fly.
+
+<H2>
+<APPLET CODEBASE="http://www-ec.njit.edu/~tlh3202/" CODE="crap.class" HEIGHT=21 WIDTH=21></APPLET>
+Work in Engineering Computer Lab</H2>
+I have increased my web space thanks to an account in the
+<A HREF="http://www-ec.njit.edu/~tlh3202/">Engineering
+Computing</A> Lab.
+Latest applet:
+<A HREF="file:/afs/cad.njit.edu/usr7/tlh3202/public_html/new.html">
+new.html</A>.
+I'm trying out some simple Java scripts to handle cookies at
+<A HREF="file:/afs/cad.njit.edu/usr7/tlh3202/public_html/cookie.html">
+cookie.html</A>.
+This applet reminds me of my days programming on my Apple II+:
+<P>
+<APPLET CODEBASE="http://www-ec.njit.edu/~tlh3202/" CODE="shit.class" HEIGHT=151 WIDTH=151></APPLET>
+
+<H2>Project Advisor</H2>
+My project advisor is Dr. Peter Ng
+<A href="mailto:ng_p@hertz.njit.edu">(ng_p@hertz.njit.edu)</A>
+and his home page is at:
+<A href="http://hertz.njit.edu/~ng_p">http://hertz.njit.edu/~ng_p</A>,
+but permissions don't allow access.
+
+<H2>A Few Netscape Easter Eggs</H2>
+<UL>
+<LI>
+<A HREF="about:mozilla">Raise Mozilla</A>
+<LI>
+<A HREF="about:netscape">Kill Mozilla</A>
+</UL>
+
+<P>
+<HR>
+<ADDRESS>
+Author: Terry L Howe <A href="mailto:txh3202@hertz.njit.edu">(txh3202@hertz.njit.edu)</A>
+</ADDRESS>
+
+Oct 4, 1995
+<HR>

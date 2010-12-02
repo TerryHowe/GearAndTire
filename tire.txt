@@ -1,0 +1,58 @@
+                   Gear and Tire Applet User Guide: Tires
+
+As mentioned in the overview the tire input field will accept input in
+English or metric sizes. The entire metric size must be input to calculate
+diameter, but English sizes only require the diameter in inches to be
+entered. Sorry, the Gear and Tire Applet does not support old tire sizing
+conventions such has H78 etc. If you actually have tires this old, you'll
+have to break out the tape measure and input the diameter in inches.
+
+This section covers the method metric tires are translated to inches and
+how tire size changes speed.
+
+How to Convert Metric Tire Sizes
+
+Metric tire sizes are made up of four components: prefix, width, aspect
+ratio, and wheel size. It takes three of these components to calculate the
+diameter of the tire. It sure is not a very straight forward sizing
+convention.
+
+The prefix is used to indicate general use of the tire. The tire input
+field trys to ignore the prefix and if your prefix causes an error, just
+don't input it. The Gear and Tire Applet currently will successfully ignore
+'P' for passenger car and 'LT' for light truck. When in doubt, drop the
+prefix.
+
+The width simply the width of the tire in mm. For example the tire size
+P215/75R15 has a width of 215mm.
+
+The next component is the aspect ratio. The aspect ratio is the percentage
+of the width that makes up the sidewall of the tire. In the above example
+the aspect ratio is 75 or 75%, so the sidewall height is 75% of 215 or
+161.25mm. If you want the diameter of the tire, you need to take into
+acount that the diameter of the tire passes two sections of the side wall.
+This means the sidewall takes up 161.25*2 or 322.5mm of the diameter.
+
+The next component is the wheel size. In the above example the wheel size
+is 15". If you convert the total sidewall into inches you get
+322.5mm*0.03937in/mm or about 12.7". Add that to wheel size and you get the
+diameter 15"+12.7" is 27.7". So a P215/75R15 tire has a diameter of about
+27.7".
+
+How Tire Sizes Effects Speed
+
+The formula for circumfrence of a circle is used to calculate how tire
+sizes effect speed. To calculate the circumfrence of a circle the Gear and
+Tire Applet uses the classic formula 2(pi)r, or given the diameter it is
+simply the diameter times pi. This means in the above example a 27.7" tire
+has a circumfrence of 27.7(pi) or around 87". Every time the tire rotates
+once, the vehicle travels 87". This can be converted to miles or kilometers
+for calculations of speed given the number of engine revolutions per hour.
+Anyway looking at the simple formulat d(pi) it is clear that a larger tire
+travels further for each revolutions since it has a bigger circumfrence.
+That is why when larger tires are swapped in, you go faster.
+
+---------------------------------------------------------------------------
+Author: Terry L Howe (txh3202@hertz.njit.edu)
+July 18, 1996
+---------------------------------------------------------------------------

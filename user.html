@@ -1,0 +1,259 @@
+<HTML>
+<HEAD>
+<TITLE>
+Gear and Tire Applet User Guide
+</TITLE>
+</HEAD>
+<BODY>
+<CENTER><H1>Gear and Tire Applet User Guide</H1></CENTER>
+<DS>
+<P>
+The document is a user guide for the Gear and Tire Applet.  The first section
+describes general use of the applet and the other sections contain more specific
+information about
+<A HREF="tire.html">tires</A>,
+<A HREF="trans.html">transmissions</A>,
+<A HREF="xfer.html">transfer cases</A>, and
+<A HREF="rnp.html">ring and pinion</A>,
+The general section covers what the Gear and Tire Applet is and what it can be
+used for.  It also covers general information on ratios and the input and output
+of the Gear and Tire Applet.
+
+
+<H2>What is the Gear and Tire Applet?</H2>
+<P>
+The gear and tire form is designed to assist you making gear and tire selections
+for your four wheel drive vehicle.  Larger tires gain ground clearance, increase
+maximum fording depth, and increase the angles of departure and approach, but
+they often don't work well with OEM gearing.  Auto manufactures build trucks
+for the street, which means they select high gearing for fast acceleration
+and better gas milage.  When larger tires are put on these trucks, the driver
+may find themselves burning through clutches because first gear is so high.
+Engine performance and gas milage may suffer because the engine is forced to
+work outside of it's optimal RPM ranges.  Top speed on the highway will
+increase, but so will low speed on the trail.
+<P>
+There are two main motivations to regear, the first is to return the truck to
+the manufactures operating ranges to improve engine performance and decrease
+wear and tear on the clutch and transmission.  The second is to increase
+offroad performance with lower gearing.  Lower gearing allows the offroader
+to go slower through obstacles giving the driver better control so there is
+less chance of vehicle damage and occupant injury.  There is a penalty for
+low gears on top highway cruising speed.  The gear and tire form is designed
+to allow the user to try different configurations and see what performance
+will be like for different configurations before going through an expensive
+gear swap.
+
+
+<H2>General Information on Gear Ratios</H2>
+<P>
+One important aspect of gear ratios is numerically large gears are the low
+ones.  Gear ratios are normally stated in the form x.xx:1, e.g. 6.32:1.  This
+translates mathematically to 1/6.32, and since 1/2 is more than 1/6, 6:1 is
+lower than 2:1.  The ratio means that for every 6.32 revolutions from the
+input the output will rotate once.  This happens to be granny low first gear
+on a Ford T-18 transmission.  When you are in first with the T-18, the engine
+does 6.32 revolutions for every 1 revolution the transmissions outputs.
+Fourth gear on the T-18 is 1.00:1, so for every revolution of the engine, it
+outputs one revolution.
+
+
+<H2>Input for the Gear and Tire Applet</H2>
+<P>
+The Gear and Tire Applet takes as input your tire size, transmission ratios,
+transfer case low range, and ring and pinion.
+<P>
+The tire field will accept input in English or metric sizes.  The entire
+metric size must be input to calculate diameter, but the prefix 'P' or 'LT'
+are optional.  For example the tire size P225/75R15 could be entered without
+the 'P'.  For English sizes, the gear and tire form is only interested in
+the diameter in inches.  The rest is not needed, but if it is typed it will
+be ignored.  For example '32x11.50R15LT M+S' can be just entered 32.
+<P>
+Input of Transmission ratios, transfer case low range, and ring and pinion
+all have the same basic form.  The Gear and Tire Applet is looking for the
+ratios and ratios are commonly expressed in the form x.xx:1.  To save some
+typing the ':1' part does not need to be entered.  You can enter it if you
+like but, it will be ignored.  If you have tooth counts, for ring and pinion
+for example, just divide the big number by the small.  For example 41/10
+ring and pinion translate to 4.10:1.
+<P>
+The user has the option to produce output in kilometers per hour or miles
+per hour.  No output is produced until the 'calculate' button is pressed.
+This document is available by pressing the 'help' button.
+
+
+<H2>Output for the Gear and Tire Applet</H2>
+<P>
+When the calculate button is pressed
+output is created in both graphical and tabular form.  The graph is a line
+graph with RPM on the x-axis ranging from 0 to 4000 RPM.  The y-axis is either
+MPH or KPH depending on user input.  MPH range from 0 to 80 MPH.  KPH range
+from 0 to 120 KPH.  Each transmission gear is printed out as a seperate
+line in the graph first being red, second blue, third green, fourth black,
+and fifth yellow.  A check box at the botton of the graph allows the user
+to "shift" the transfer case into low range.  The title of the graph gives
+the users tire size and ring and pinion ratio.
+<P>
+The tabular output is also produced each time the calculate button is
+pressed.  The title on the tabular output indicates the units of output
+either KPH or MPH.  It also indicates the users selection of tire and
+ring and pinion and allows the user to enter different RPMs to see the
+table at various engine outputs.  Each row of the table represents a
+gear of the transmission first, second, third and so forth.  The columns
+represent high and low range of the transfer case.
+<P>
+The crawl ratio, which is often used to compare gearing set ups,
+is also included in the tabular output.  The crawl ratio represents
+compound low, or first gear of the transmission and low range of the
+transfer case.  For example, many Wranglers have a first gear around
+3.83:1, the transfer case low range is 2.72:1, and the axle ring and
+pinion is 3.07:1.  This means the crawl ratio is 3.83*2.72*3.07 or around
+32:1.  Put some big tires on that Wrangler and it will be difficult to
+control on a technical trail.  A crawl ratio around 60:1 is often good
+target.
+<P>
+There is more detailed help on
+<A HREF="tire.html">tires</A>,
+<A HREF="trans.html">transmissions</A>,
+<A HREF="xfer.html">transfer cases</A>, and
+<A HREF="rnp.html">ring and pinion</A>,
+see the special sections for these topics.
+<H1>Tires</H1>
+As mentioned in the overview the tire input field will accept input
+in English or metric sizes.  The entire metric size must be input to
+calculate diameter, but English sizes only require the diameter in
+inches to be entered.  Sorry, the Gear and Tire Applet does not
+support old tire sizing conventions such has H78 etc.  If you actually
+have tires this old, you'll have to break out the tape measure and
+input the diameter in inches.
+<P>
+This section covers the method metric tires are translated to inches
+and how tire size changes speed.
+
+
+<H2>How to Convert Metric Tire Sizes</H2>
+<P>
+Metric tire sizes are made up of four components: prefix, width, aspect
+ratio, and wheel size.  It takes three of these components to calculate
+the diameter of the tire.  It sure is not a very straight forward sizing
+convention.
+<P>
+The prefix is used to indicate general use of the tire.  The
+tire input field trys to ignore the prefix and if your prefix causes an
+error, just don't input it.  The Gear and Tire Applet currently will
+successfully ignore 'P' for passenger car and 'LT' for light truck.  When
+in doubt, drop the prefix.
+<P>
+The width simply the width of the tire in mm.  For example the tire size
+P215/75R15 has a width of 215mm.
+<P>
+The next component is the aspect ratio.  The aspect ratio is the percentage
+of the width that makes up the sidewall of the tire.  In the above example
+the aspect ratio is 75 or 75%, so the sidewall height is 75% of 215 or
+161.25mm.  If you want the diameter of the tire, you need to take into
+acount that the diameter of the tire passes two sections of the side wall.
+This means the sidewall takes up 161.25*2 or 322.5mm of the diameter.
+<P>
+The next component is the wheel size.  In the above example the wheel size
+is 15".  If you convert the total sidewall into inches you get
+322.5mm*0.03937in/mm or about 12.7".  Add that to wheel size and you get the
+diameter 15"+12.7" is 27.7".  So a P215/75R15 tire has a diameter of about
+27.7".
+
+
+<H2>How Tire Sizes Effects Speed</H2>
+The formula for circumfrence of a circle is used to calculate how tire sizes
+effect speed.  To calculate the circumfrence of a circle the Gear and Tire
+Applet uses the classic formula 2(pi)r, or given the diameter it is simply
+the diameter times pi.  This means in the above example a 27.7" tire has
+a circumfrence of 27.7(pi) or around 87".  Every time the tire rotates once,
+the vehicle travels 87".  This can be converted to miles or kilometers for
+calculations of speed given the number of engine revolutions per hour.
+Anyway looking at the simple formulat d(pi) it is clear that a larger tire
+travels further for each revolutions since it has a bigger circumfrence.
+That is why when larger tires are swapped in, you go faster.
+
+<H1>Transmissions</H1>
+The Gear and Tire Applet allows you to enter up to 5 speeds and a reverse
+gear ratio.  If you have a 3 speed or don't have the reverse ratio, there
+is no need to input the extra information.  If you aren't sure what
+transmission you have you can use the generalizations here to get numbers
+that probably will be very accurate give or take a few KPH/MPH.
+
+
+<H2>Generalizations About Manual Transmissions</H2>
+Ratios for manual transmissions don't vary all that much.  Most of the
+time first gear is around 4:1 unless it granny low truck transmission such
+as the T-18, NP435, SM465, SM420 etc.  These transmissions have a first
+anywhere between 6.32:1 to 7.20:1.  Generally, the final drive gear
+is straight through or 1.00:1 coupling the input shaft directly to the
+main shaft.  I've never seen a 3 or 4 speed that didn't have a 1.00:1
+final drive gear.  Five speed transmissions have a 1.00:1 fourth and an
+overdrive.  The overdrive fifth gear is typically around 0.75:1.  So,
+when in doubt, use 4.00:1, 3.00:1, 2.00:1, 1.00:1 for a 4 speed.
+
+
+<H2>Generalizations About Automatic Transmissions</H2>
+The author of this document is not particularly knowledgable about automatic
+transmissions, but he is still willing to make some generalizations.  Most
+automatics seem to have a first gear around 3:1 and final drive gear of 1:1.
+Overdrive automatics tend to have 0.75:1 overdrive.
+
+<H1>Tranfer Case</H1>
+It wouldn't be four wheel drive without a transfer case.  The transfer
+case transfers power from the transmission to the rear and front axles.
+Typically, the driver has 2 high, 4 high, neutral, and 4 low.  The Gear
+and Tire Applet supports the standard two speed transfer cases.  If you
+have a three speed transfer case, you'll have to enter the ratios
+separately.
+<P>
+High range is assumed to be 1:00:1 for 2 high and 4 high.  Low range is
+input by the user.  Low range is typically around 2.50:1.
+
+<H1>Ring and Pinion</H1>
+The ring and pinion are located in the differential housing of the axle.
+The pinion takes input from the driveshaft and turns the ring.  The ring
+spins the differential which turns the axle shafts.  There are
+a fairly wide variety of ring and pinions ratios available anywhere from
+2.73:1 to 6.50:1 depending on the model of the axle.  Since transmission
+and transfercase ratios are fairly set, a change of ring and pinion is
+the easiest and least expensive way to modify the gearing of your 4x4.
+<P>
+Figuring out what ratio ring and pinion you have is not always easy.
+Depending on engine, transmission, and option package the manufacturer
+may have used any one of several ratios.  The easiest way is to locate
+and try to read the tag on on the differential housing.  Sometimes
+this tag is located on the differential housing cover, sometimes it is
+not.  It may be a a code stamped in the housing that needs to be looked
+up in your technical service manual.
+<P>
+One sure fire way of determining your ratio is openning up the axle and
+taking a look.  Often the ring is stamped with tooth count, ratio, and
+build date.  Sometimes it isn't stamped, but you can still count the
+teeth yourself and divide ring teeth by pinion teeth to get the ratio.
+<P>
+An easier, but not as accurate method of determining your ratio
+is to jack one wheel off the ground and count the number of drive shaft
+rotations it takes to turn the tire one full rotation.  Multiply this
+number by two and that is your ratio.  If you have a looking or limited
+slip differential, you may find it difficult to rotate the tire by hand.
+If this is the case lift both tires off the ground and support the vehicle
+with jack stands to count rotations for one rotation of both tires.
+<P>
+One final note on ring and pinion, if you know the ratio of one axle the
+other should be the same give or take a few hundredths.  So if you find
+a tag on the front, but nothing on the rear, go with the tag you found.
+
+
+
+</UL>
+
+<P>
+<HR>
+<ADDRESS>
+Author: Terry L Howe <A href="mailto:txh3202@hertz.njit.edu">(txh3202@hertz.njit.edu)</A>
+</ADDRESS>
+
+July 18, 1996
+<HR>

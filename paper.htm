@@ -1,0 +1,248 @@
+<HTML>
+<HEAD>
+<TITLE>
+Masters Project: Gear and Tire Applet
+</TITLE>
+</HEAD>
+<BODY>
+<CENTER><H1>Masters Project: Gear and Tire Applet</H1></CENTER>
+<DS>
+<P>
+First, this paper covers an overview of what the package does and how
+it will be used.  Second, some interesting features of Java that were
+used to develop the final version of the package will be discussed.
+
+<H1>The Gear and Tire Applet</H1>
+A full version of the Users Guide for the Gear and Tire Applet is included
+in Appendix A, so here we will just give an overview of the product, why
+it was developed, and what it will be used for.
+
+<H2>What is the Gear and Tire Applet?</H2>
+<P>
+The Gear and Tire Applet is designed to assist the user in making gear and
+tire selections for their four wheel drive vehicle.  Larger tires gain
+ground clearance, increase
+maximum fording depth, and increase the angles of departure and approach, but
+they often don't work well with OEM gearing.  Auto manufactures build trucks
+for the street, which means they select high gearing for fast acceleration
+and better gas milage.  When larger tires are put on these trucks, the driver
+may find themselves burning through clutches because first gear is so high.
+Engine performance and gas milage may suffer because the engine is forced to
+work outside of it's optimal RPM ranges.  Top speed on the highway will
+increase, but so will low speed on the trail.
+<P>
+There are two main motivations to regear, the first is to return the truck to
+the manufactures operating ranges to improve engine performance and decrease
+wear and tear on the clutch and transmission.  The second is to increase
+offroad performance with lower gearing.  Lower gearing allows the offroader
+to go slower through obstacles giving the driver better control so there is
+less chance of vehicle damage and occupant injury.  There is a penalty for
+low gears on top highway cruising speed.  The gear and tire form is designed
+to allow the user to try different configurations and see what performance
+will be like for different configurations before going through an expensive
+gear swap.
+<P>
+Basically, the user inputs tire size, transmission gear ratios, transfer
+case gear ratio, and ring and pinion ratio in a screen that looks like
+the screen in figure A. Once the calculate button is pressed, tabular and
+graphical output is produced depiciting the MPH at different engine RPMs.
+The graph uses different colors for each gear of the transmission and the
+graph and table can be found in figure B.
+
+<H2>What will the Gear and Tire Applet be used for?</H2>
+There is a demand in the Internet off road community for this information.
+Four wheel drive enthusists are always looking for this information to help
+them make gear and tire selections for their trucks.  Several people have
+developed spread sheets to generate this information, but until now no one
+has created a Java version.  It also features graphical output which hasn't
+been done before.  Dean Waters, the web master of the Offroad page at
+<A HREF="http://www.off-road.com/4x4web">http://www.off-road.com/</A>, has
+agreed to host the application permanently.
+
+<H1>The 'C' Gear and Tire Form</H1>
+The 'C' version of the Gear and Tire form got as far as generating tabular
+output.  The biggest problem I had with it was getting someone to host the
+executable.  In my previous job at AT&T I was web master for my group, so
+I was able to set the program up locally and test it, but due to AT&Ts
+firewall, no one outside AT&T had access to it.  Because of security
+considerations, the administrators at NJIT were justifiable concerned
+about allowing the program to run.  Since I had a good friend at Tulane
+University with connections in the computer department, it was easier to
+get it set up there, were it still runs today at
+<A HREF="http://studentweb.tulane.edu/cgi-bin/a.out">
+http://studentweb.tulane.edu/cgi-bin/a.out</A>
+<P>
+The purpose of the package is the same, but the interface is a bit different.
+When this package was developed, my browser didn't have frames or windowing
+capabilities.  The user inputs two sets of values, side by side so one
+call to the CGI script will do the calculation and produce output to compare
+two different configurations.  This makes the input screen a bit busy and
+slightly confusing.  The input screen for the 'C' version is displayed in
+figure C.
+<BR>
+
+<TITLE>Gear and Tire Form</TITLE>
+<CENTER>
+<FORM ACTION="http://studentweb.tulane.edu:80/cgi-bin/a.out" METHOD="GET">
+<TABLE>
+<TH>Current Tire (in) <TH> Desired Tire (in) <TR>
+<TD ALIGN="CENTER">
+<SELECT NAME="tire1">
+<OPTION>28
+<OPTION>29
+<OPTION>30
+<OPTION>31
+<OPTION>32
+<OPTION SELECTED>33
+<OPTION>34
+<OPTION>35
+<OPTION>36
+<OPTION>38
+<OPTION>38.5
+<OPTION>39.5
+<OPTION>40
+<OPTION>42
+<OPTION>44
+<OPTION>metric
+<OPTION>other
+</SELECT>
+<TD ALIGN="CENTER">
+<SELECT NAME="tire2">
+<OPTION>28
+<OPTION>29
+<OPTION>30
+<OPTION>31
+<OPTION>32
+<OPTION SELECTED>33
+<OPTION>34
+<OPTION>35
+<OPTION>36
+<OPTION>38
+<OPTION>38.5
+<OPTION>39.5
+<OPTION>40
+<OPTION>42
+<OPTION>44
+<OPTION>metric
+<OPTION>other
+</SELECT>
+<TR>
+</TABLE>
+<TABLE>
+<TH>
+Current R&P
+<TH>
+Desired R&P
+<TR>
+<TD ALIGN="CENTER">
+<INPUT TYPE="text" NAME="randp1" SIZE="4" MAXLENGTH="4">
+<TD ALIGN="CENTER">
+<INPUT TYPE="text" NAME="randp2" SIZE="4" MAXLENGTH="4">
+<TR>
+</TABLE>
+<P><H3>Transfercase</H3>
+Low range: <INPUT TYPE="text" NAME="xfer" SIZE="4" MAXLENGTH="4">
+<P><H3>Transmission</H3>
+<PRE>
+first:   <INPUT TYPE="text" NAME="first" SIZE="4" MAXLENGTH="4">   second:  <INPUT TYPE="text" NAME="second" SIZE="4" MAXLENGTH="4">
+third:   <INPUT TYPE="text" NAME="third" SIZE="4" MAXLENGTH="4">   fourth:  <INPUT TYPE="text" NAME="fourth" SIZE="4" MAXLENGTH="4">
+fifth:   <INPUT TYPE="text" NAME="fifth" SIZE="4" MAXLENGTH="4">   reverse: <INPUT TYPE="text" NAME="reverse" SIZE="4" MAXLENGTH="4">
+</PRE>
+<P>
+<INPUT TYPE="radio" NAME="sunits" VALUE="mph" CHECKED>Miles per Hour
+<INPUT TYPE="radio" NAME="sunits" VALUE="kph">Kilometers per Hour
+<P>
+<INPUT TYPE="HIDDEN" NAME="rpm" VALUE="2500" SIZE="4" MAXLENGTH="4">
+<P>
+<INPUT TYPE="SUBMIT">
+</CENTER>
+</FORM>
+<P>
+</CENTER>
+<HR>
+<ADDRESS>
+Author: Terry L Howe</A>
+</ADDRESS>
+Jan 21, 1996
+<HR>
+
+<CENTER><H2>Figure C</H2></CENTER>
+<BR>
+The busy part is the "Current Tire" and "Desired Tire" part.  Same for the
+current and desired R&P.  It is just a bit confusing to the user.  The rest
+of the layout seems straight forward enough.  If the 'C' version was modified
+to use frames the unnecessary complexity could be avoided.
+<P>
+The output also suffers from some unnecessary complexity that could be
+avoided with frames or by spawning widows.  A sample output follows in
+figure D.
+<BR>
+<TITLE>Gear and Tire Form</TITLE>
+<CENTER>
+<FORM ACTION="http://studentweb.tulane.edu:80/cgi-bin/a.out" METHOD="GET">
+<INPUT TYPE="HIDDEN" NAME="tire1" VALUE="32">
+<INPUT TYPE="HIDDEN" NAME="tire2" VALUE="33">
+<INPUT TYPE="HIDDEN" NAME="randp1" VALUE="3.540000">
+<INPUT TYPE="HIDDEN" NAME="randp2" VALUE="5.380000">
+<INPUT TYPE="HIDDEN" NAME="xfer" VALUE="2.620000">
+<INPUT TYPE="HIDDEN" NAME="reverse" VALUE="7.320000">
+<INPUT TYPE="HIDDEN" NAME="first" VALUE="6.320000">
+<INPUT TYPE="HIDDEN" NAME="second" VALUE="3.500000">
+<INPUT TYPE="HIDDEN" NAME="third" VALUE="2.500000">
+<INPUT TYPE="HIDDEN" NAME="fourth" VALUE="1.000000">
+<INPUT TYPE="HIDDEN" NAME="sunits" VALUE="kph">
+<CENTER>
+<H1>KPH at 2500 RPM</H1>
+<P>
+<TABLE>
+<TH> <TH> <TH COLSPAN=4><H3>R&P 3.54</H3> <TR>
+<TH> <TH> <TH COLSPAN=2>Low 2.62 <TH COLSPAN=2>High 1.00 <TR>
+<TH> <TH> <TH>Tire 1 <TH>Tire 2 <TH>Tire 1 <TH>Tire 2 <TR>
+<TH> <TH ALIGN="LEFT">Gear<TH ALIGN="RIGHT">32<TH ALIGN="RIGHT">33<TH ALIGN="RIGHT">32<TH ALIGN="RIGHT">33<TR>
+<TH ALIGN="LEFT">First
+ <TD ALIGN="RIGHT">6.32<TD ALIGN="RIGHT"> 7<TD ALIGN="RIGHT"> 7<TD ALIGN="RIGHT">17<TD ALIGN="RIGHT">18<TR>
+<TH ALIGN="LEFT">Second <TD ALIGN="RIGHT">3.50<TD ALIGN="RIGHT">12<TD ALIGN="RIGHT">12<TD ALIGN="RIGHT">31<TD ALIGN="RIGHT">32<TR>
+<TH ALIGN="LEFT">Third <TD ALIGN="RIGHT">2.50<TD ALIGN="RIGHT">17<TD ALIGN="RIGHT">17<TD ALIGN="RIGHT">43<TD ALIGN="RIGHT">45<TR>
+<TH ALIGN="LEFT">Fourth <TD ALIGN="RIGHT">1.00<TD ALIGN="RIGHT">41<TD ALIGN="RIGHT">43<TD ALIGN="RIGHT">108<TD ALIGN="RIGHT">112<TR>
+<TH ALIGN="LEFT">Fifth <TD ALIGN="RIGHT">0.00<TD ALIGN="RIGHT">INF<TD ALIGN="RIGHT">INF<TD ALIGN="RIGHT">INF<TD ALIGN="RIGHT">INF<TR>
+<TH ALIGN="LEFT">Reverse <TD ALIGN="RIGHT">7.32<TD ALIGN="RIGHT"> 6<TD ALIGN="RIGHT"> 6<TD ALIGN="RIGHT">15<TD ALIGN="RIGHT">15<TR>
+</TABLE>
+<BR>
+<TABLE>
+<TH> <TH> <TH COLSPAN=4><H3>R&P 5.38</H3> <TR>
+<TH> <TH> <TH COLSPAN=2>Low 2.62 <TH COLSPAN=2>High 1.00 <TR>
+<TH> <TH> <TH>Tire 1 <TH>Tire 2 <TH>Tire 1 <TH>Tire 2 <TR>
+<TH> <TH ALIGN="LEFT">Gear<TH ALIGN="RIGHT">32<TH ALIGN="RIGHT">33<TH ALIGN="RIGHT">32<TH ALIGN="RIGHT">33<TR>
+<TH ALIGN="LEFT">First <TD ALIGN="RIGHT">6.32<TD ALIGN="RIGHT"> 4<TD ALIGN="RIGHT"> 4<TD ALIGN="RIGHT">11<TD ALIGN="RIGHT">12<TR>
+<TH ALIGN="LEFT">Second <TD ALIGN="RIGHT">3.50<TD ALIGN="RIGHT"> 8<TD ALIGN="RIGHT"> 8<TD ALIGN="RIGHT">20<TD ALIGN="RIGHT">21<TR>
+<TH ALIGN="LEFT">Third <TD ALIGN="RIGHT">2.50<TD ALIGN="RIGHT">11<TD ALIGN="RIGHT">11<TD ALIGN="RIGHT">28<TD ALIGN="RIGHT">29<TR>
+<TH ALIGN="LEFT">Fourth <TD ALIGN="RIGHT">1.00<TD ALIGN="RIGHT">27<TD ALIGN="RIGHT">28<TD ALIGN="RIGHT">71<TD ALIGN="RIGHT">73<TR>
+<TH ALIGN="LEFT">Fifth <TD ALIGN="RIGHT">0.00<TD ALIGN="RIGHT">INF<TD ALIGN="RIGHT">INF<TD ALIGN="RIGHT">INF<TD ALIGN="RIGHT">INF<TR>
+<TH ALIGN="LEFT">Reverse <TD ALIGN="RIGHT">7.32<TD ALIGN="RIGHT"> 4<TD ALIGN="RIGHT"> 4<TD ALIGN="RIGHT">10<TD ALIGN="RIGHT">10<TR>
+</TABLE>
+</CENTER>
+To view this table at a different RPM, enter the RPM and press return <INPUT TYPE="text" NAME="rpm" SIZE="4" MAXLENGTH="4">
+<P>
+<A HREF="http://studentweb.tulane.edu:80/cgi-bin/a.out">Click here</A> to start a new Gear and Tire Form
+</FORM>
+<P><H4>* Your MPH/KPH will vary.  This table is for estimation and comparison only.</H4>
+<P>
+</CENTER>
+<HR>
+<ADDRESS>
+Author: Terry L Howe</A>
+</ADDRESS>
+
+Jan 21, 1996
+<HR>
+<CENTER><H2>Figure D</H2></CENTER>
+<BR>
+
+<UL>
+<HR>
+<ADDRESS>
+Author: Terry L Howe <A href="mailto:txh3202@hertz.njit.edu">(txh3202@hertz.njit.edu)</A>
+</ADDRESS>
+
+July 18, 1996
+<HR>

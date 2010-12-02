@@ -1,0 +1,39 @@
+              Gear and Tire Applet User Guide: Ring and Pinion
+
+The ring and pinion are located in the differential housing of the axle.
+The pinion takes input from the driveshaft and turns the ring. The ring
+spins the differential which turns the axle shafts. There are a fairly wide
+variety of ring and pinions ratios available anywhere from 2.73:1 to 6.50:1
+depending on the model of the axle. Since transmission and transfercase
+ratios are fairly set, a change of ring and pinion is the easiest and least
+expensive way to modify the gearing of your 4x4.
+
+Figuring out what ratio ring and pinion you have is not always easy.
+Depending on engine, transmission, and option package the manufacturer may
+have used any one of several ratios. The easiest way is to locate and try
+to read the tag on on the differential housing. Sometimes this tag is
+located on the differential housing cover, sometimes it is not. It may be a
+a code stamped in the housing that needs to be looked up in your technical
+service manual.
+
+One sure fire way of determining your ratio is openning up the axle and
+taking a look. Often the ring is stamped with tooth count, ratio, and build
+date. Sometimes it isn't stamped, but you can still count the teeth
+yourself and divide ring teeth by pinion teeth to get the ratio.
+
+An easier, but not as accurate method of determining your ratio is to jack
+one wheel off the ground and count the number of drive shaft rotations it
+takes to turn the tire one full rotation. Multiply this number by two and
+that is your ratio. If you have a looking or limited slip differential, you
+may find it difficult to rotate the tire by hand. If this is the case lift
+both tires off the ground and support the vehicle with jack stands to count
+rotations for one rotation of both tires.
+
+One final note on ring and pinion, if you know the ratio of one axle the
+other should be the same give or take a few hundredths. So if you find a
+tag on the front, but nothing on the rear, go with the tag you found.
+
+---------------------------------------------------------------------------
+Author: Terry L Howe (txh3202@hertz.njit.edu)
+July 18, 1996
+---------------------------------------------------------------------------

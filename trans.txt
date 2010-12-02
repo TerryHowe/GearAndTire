@@ -1,0 +1,32 @@
+               Gear and Tire Applet User Guide: Transmissions
+
+The Gear and Tire Applet allows you to enter up to 5 speeds and a reverse
+gear ratio. If you have a 3 speed or don't have the reverse ratio, there is
+no need to input the extra information. If you aren't sure what
+transmission you have you can use the generalizations here to get numbers
+that probably will be very accurate give or take a few KPH/MPH.
+
+Generalizations About Manual Transmissions
+
+Ratios for manual transmissions don't vary all that much. Most of the time
+first gear is around 4:1 unless it granny low truck transmission such as
+the T-18, NP435, SM465, SM420 etc. These transmissions have a first
+anywhere between 6.32:1 to 7.20:1. Generally, the final drive gear is
+straight through or 1.00:1 coupling the input shaft directly to the main
+shaft. I've never seen a 3 or 4 speed that didn't have a 1.00:1 final drive
+gear. Five speed transmissions have a 1.00:1 fourth and an overdrive. The
+overdrive fifth gear is typically around 0.75:1. So, when in doubt, use
+4.00:1, 3.00:1, 2.00:1, 1.00:1 for a 4 speed.
+
+Generalizations About Automatic Transmissions
+
+The author of this document is not particularly knowledgable about
+automatic transmissions, but he is still willing to make some
+generalizations. Most automatics seem to have a first gear around 3:1 and
+final drive gear of 1:1. Overdrive automatics tend to have 0.75:1
+overdrive.
+
+---------------------------------------------------------------------------
+Author: Terry L Howe (txh3202@hertz.njit.edu)
+July 18, 1996
+---------------------------------------------------------------------------
